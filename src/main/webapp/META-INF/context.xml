@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/ElectronicaWebDAW">
+    
+    <!--Tomcat Connection Pool-->
+    <Resource auth="Container" 
+              driverClassName="org.apache.derby.jdbc.ClientDriver" 
+              maxActive="8" 
+              name="BaseDatos" 
+              password="gonzalo" 
+              type="javax.sql.DataSource" 
+              url="jdbc:derby://localhost:1527/BaseDatos" 
+              username="gonzalo"/>
+    
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
+            dataSourceName="BaseDatos"
+            localDataSource="true"
+            userTable ="Usuarios"
+            userNameCol ="NOMBRE_USUARIO"
+            userCredCol ="PASSWORD"
+            userRoleTable ="Roles"
+            roleNameCol ="ROL"
+    /> 
+    
+ 
+</Context> 

@@ -1,0 +1,37 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page pageEncoding="UTF-8" %>
+
+<section class="panel-default">
+    
+  <header class="panel-heading">
+      <h2>Panel De Control Del Usuario</h2>
+  </header>    
+    
+    
+    <article class="panel-body">        
+          <h2 class="panel-body"><a href="main/PanelControlUsuario/CuentaUsuario">Panel De Control</a></h2>
+    </article>    
+    
+    
+    
+    <c:if test="${not empty usuario}">
+        <section class="panel-body" >
+            <ul class="list-group" role="tablist">
+                <li class="list-group-item" >
+                    <h3 class="panel-body">Bienvenido ${usuario.nombre}</h3>
+                </li>
+                <li  class="list-group-item">
+                    <h3 class="panel-body">Nombre De Usuario: ${usuario.nombre_usuario} </h3>
+                </li>
+                <li  class="list-group-item">
+                    <h3 class="panel-body">Dispones de ${usuario.puntos} puntos</h3>
+                </li>
+                <li  class="list-group-item">
+                    <h3 class="panel-body">e-mail actual: ${usuario.correoElectronico} </h3>
+                </li> 
+            </ul>
+        </section>    
+    </c:if>
+           
+</section>
